@@ -99,19 +99,3 @@ uint16_t cksum16(void *addr, uint32_t length)
 
 
 
-
-int main(void)
-{
-	char* tst = "abcdefghijklmnopqrstuvxyz";
-	uint16_t ck16 = cksum16(tst,strlen(tst));
-	printf("cksum=0x%x\n",ck16);
-	uint32_t lfsr = 1;
-	do {
-		printf("%u\n",lfsr);
-		//lfsr = galois32(lfsr);
-		//lfsr = galois16(lfsr);	
-		//lfsr = galois8(lfsr);
-		//lfsr = fib8(lfsr);	
-	}while (lfsr != 1u);
-	return 0;
-}
