@@ -19,7 +19,7 @@ void* get_ancillary_attr(struct msghdr* msg, int cmsg_lvl, int cmsg_type);
 #define CMSG_IPV6_DSCP(msg)  (*(int*)get_ancillary_attr(msg, IPPROTO_IPV6, IPV6_TCLASS))
 
 
-void set_ancillary_attr(struct msghdr* msg, uint32_t cmsg_lvl,
+uint32_t set_ancillary_attr(struct msghdr* msg, uint32_t cmsg_lvl,
                 uint32_t cmsg_type, void* cmsg_data, uint32_t cmsg_len);
 
 
